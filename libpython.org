@@ -1,0 +1,28 @@
+#+title: libpython
+
+#+begin_src clojure
+(ns core
+  (:require [py-init]
+            [libpython-clj2.python :as py]
+            [libpython-clj2.require :refer [require-python]]))
+
+(require-python '[numpy :as np])
+
+  (let [arr (np/array [1 2 3 4 5])]
+    (println "NumPy array:" arr)
+    (println "Mean:" (np/mean arr)))
+#+end_src
+
+#+begin_src clojure
+  (let [arr (np/array [1 2 3 4 5])]
+    (println "NumPy array:" arr)
+    (println "Mean:" (np/mean arr)))
+#+end_src
+
+#+begin_src python
+import numpy
+
+arr = numpy.array([1, 2, 3, 4, 5])
+
+print(arr)
+#+end_src

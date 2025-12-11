@@ -1,0 +1,9 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        clj-python/libpython-clj {:mvn/version "2.026"}
+        io.github.nextjournal/clerk {:mvn/version "0.18.1158"}}
+ :aliases
+ {:clerk {:exec-fn nextjournal.clerk/serve!
+          :exec-args {:watch-paths ["notebooks" "src"]
+                      :browse true
+                      :port 7777}}}}
